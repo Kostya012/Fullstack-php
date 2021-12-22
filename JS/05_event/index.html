@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>Events</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      td {
+        border: 1px solid black;
+        padding: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Task 1</h2>
+    <input
+      type="button"
+      id="hider"
+      value="Нажмите, чтобы спрятать текст"
+    />
+    <div id="text">Текст</div>
+    <script>
+      let button = document.getElementById("hider");
+      button.addEventListener("click", hiddenDiv);
+
+      function hiddenDiv() {
+        let div = document.getElementById("text");
+        div.style.display = "none";
+      }
+    </script>
+    <script src="js/05_event.js"></script>
+  </body>
+</html>

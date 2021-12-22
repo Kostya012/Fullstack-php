@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="Ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kostiantyn Shevtsov" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Module JS 2021-2022</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      td {
+        border: 1px solid black;
+        padding: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-alevel">
+        <a href="https://a-level.com.ua/" target="_blank">
+          <img src="img/a-level-logo.png" alt="A-Level" />
+        </a>
+      </div>
+      <div class="nav" id="slow_nav">
+        <ul class="navbar">
+          <li class="blog-nav">
+            <a class="blog-nav-item active" id="index" href="module.html">
+              <div class="hicon-index"></div>
+              Home page
+            </a>
+          </li>
+          <li class="blog-nav">
+            <a class="blog-nav-item" id="random">
+              <div class="hicon-random"></div>
+              Random
+            </a>
+          </li>
+          <li class="blog-nav">
+            <a class="blog-nav-item" id="calc">
+              <div class="hicon-calc"></div>
+              Calculator
+            </a>
+          </li>
+          <li class="blog-nav">
+            <a class="blog-nav-item" id="lucky">
+              <div class="hicon-lucky"></div>
+              Oh lucky
+            </a>
+          </li>
+        </ul>
+        <div class="article">
+          <h1 id="article">Home page</h1>
+        </div>
+      </div>
+      <div class="logo-nix">
+        <a href="https://www.nixsolutions.com/ru/" target="_blank">
+          <img src="img/nix-logo-new.svg" alt="nix" />
+        </a>
+      </div>
+    </header>
+    <div class="wrapper">
+      <main>
+        <div class="about" id="aboutRandom">
+          <div class="green">Random numbers</div>
+          <img src="img/random.png" alt="Random numbers" />
+          <p>
+            Случайные числа — искусственно полученная последовательность
+            реализаций случайной величины с заданным законом распределения.
+          </p>
+        </div>
+        <div class="about" id="aboutCalculator">
+          <div class="green">Calculator</div>
+          <img src="img/calc.svg" alt="Calculator" />
+          <p>
+            Калькуля́тор (лат. calculātor «счётчик») — электронное вычислительное
+            устройство для выполнения операций над числами или алгебраическими
+            формулами.
+          </p>
+          <p>
+            Калькулятор заменил механические вычислительные устройства, такие,
+            как абаки, счёты, логарифмические линейки, механические или
+            электромеханические арифмометры, а также математические таблицы
+            (прежде всего — таблицы логарифмов).
+          </p>
+        </div>
+        <div class="about" id="aboutLucky">
+          <div class="green">Oh lucky</div>
+          <img src="img/lucky.jpg" alt="Oh lucky" />
+          <p>
+            «Кто хо́чет стать миллионе́ром?» (в программах передач — «Кто хочет
+            стать миллионером?» с Дмитрием Дибровым, ранее «Кто хочет стать
+            миллионером?» с Максимом Галкиным[6]) — телеигра, аналог
+            оригинальной английской телевикторины «Who Wants to Be a
+            Millionaire?», воспроизведённый по одноимённому франчайзингу
+            компании «Sony Pictures Entertainment». В телеигре каждый участник
+            может выиграть 3 миллиона рублей, ответив на 15 вопросов из
+            различных областей знаний.
+          </p>
+          <p>
+            Изначально транслировалась на «НТВ» с 1 октября 1999 по 27 января
+            2001 года под названием «О, счастливчик!», в настоящее время идёт на
+            «Первом канале». С 1999 по 2008 год производилась компанией
+            «WMEDIA»[7], с 2008 года программу производит группа компаний
+            «Красный квадрат»
+          </p>
+        </div>
+        <div class="about100" id="contRandom">
+          <div class="center">
+            <div class="green">Random numbers</div>
+            <div class="item">
+              <span>
+                <label for="min">Min:</label>
+                <input type="number" name="min" min="0" max="10000" id="min" />
+              </span>
+            </div>
+            <div class="item">
+              <span>
+                <label for="max">Max:</label>
+                <input type="number" name="max" min="0" max="10000" id="max" />
+              </span>
+            </div>
+            <div class="item">
+              <button class="button-77" role="button" id="generate">
+                Generate
+              </button>
+            </div>
+            <div class="item">Result:</div>
+            <div class="item"><span id="result"></span></div>
+          </div>
+        </div>
+        <div class="about100" id="contCalc">
+          <div class="center" id="calculator">
+            <div class="green">Calculator</div>
+            <div class="item">
+              <span class="clear">C</span>
+              <input class="screen" type="text" name="calc" id="inputCalc" />
+            </div>
+
+            <div class="keys">
+              <div>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span class="operator">+</span>
+              </div>
+              <div>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span class="operator">-</span>
+              </div>
+              <div>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span class="operator">÷</span>
+              </div>
+              <div>
+                <span>0</span>
+                <span>.</span>
+                <span class="eval">=</span>
+                <span class="operator">x</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about100" id="contLucky">
+          <div class="center">
+            <div class="green">Oh lucky</div>
+            <div class="item">
+              <button class="button-77" role="button" id="startGame">
+                Играть
+              </button>
+            </div>
+            <div class="item question" id="resultat"></div>
+            <div id="ohLucky"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      @ A-Level Ukraine, NIX SOLUTIONS ™, design by
+      kostiantyn.shevtsov@gmail.com, 2021-2022
+    </footer>
+    <script src="js/module.js"></script>
+  </body>
+</html>
