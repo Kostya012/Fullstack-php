@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+.container {
+  order: 1;
+  max-width: 800px;
+}
+
+form {
+  padding: 15px;
+  border-right: 2px solid #292828;
+  border-radius: 10px;
+  background-color: #e2ffd9;
+  margin-top: 10px;
+}
+
+.form-group {
+  padding: 10px 0;
+}
+
+label {
+  padding-left: 10px;
+  font-size: 1.5em;
+}
+
+input,
+textarea {
+  font-size: 1.3em;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
+  max-height: 200px;
+}
+
+input[name="name"],
+input[type="password"],
+input[name="email"],
+input[name="captcha"],
+input[name="captcha2"],
+input[type="text"],
+select,
+textarea {
+  border: 3px solid silver;
+}
+
+.remember {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 14px;
+  align-items: center;
+}
+
+.remember li span {
+  font-size: 14px;
+  padding-bottom: 2px;
+}
+
+.remember li span:hover {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  border: 3px solid #3a9942;
+}
+
+#captch2,
+#captch {
+  display: none;
+}
+
+.label {
+  font-size: 20px;
+}
+
+.spanRed {
+  color: #c70000;
+}
+
+.backtotop {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  border: 2px solid silver;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #e0e0e0;
+  background-color: #04b913;
+}
+
+.backtotop:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: #4abb53;
+}
+
+.orange:hover {
+  background-color: #ff6c29;
+}
+
+.save-plus {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.save {
+  display: block;
+  padding: 5px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+}
+
+.save img {
+  width: 70px;
+  height: 70px;
+}
+
+.save:hover {
+  background-color: #ff7300;
+}
+
+/* for info */
+
+#info {
+  width: 100%;
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  background-color: #d8f5eb;
+}
+
+thead tr {
+  background-color: #9fff44;
+}
+
+th {
+  font-weight: bolder;
+}
+
+td,
+th {
+  vertical-align: middle;
+  border: 1px solid silver;
+  padding: 5px;
+  font-size: 20px;
+}
+
+tbody tr:hover {
+  background-color: #f0fcf8;
+}
+
+tr td:nth-child(1) {
+  font-weight: bold;
+}

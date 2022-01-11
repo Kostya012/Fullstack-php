@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="Ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kostiantyn Shevtsov" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/sign.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Module php 2021-2022</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      td {
+        border: 1px solid black;
+        padding: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-alevel">
+        <a href="https://a-level.com.ua/" target="_blank">
+          <img src="img/a-level-logo.png" alt="A-Level" />
+        </a>
+      </div>
+      <div class="nav" id="slow_nav">
+        <ul class="navbar">
+          <li class="blog-nav">
+            <a class="blog-nav-item active" id="index" href="index.html">
+              <div class="hicon-index"></div>
+              Home page
+            </a>
+            <a class="blog-nav-item" id="information">
+              <div class="hicon-info"></div>
+              Information
+            </a>
+            <a class="blog-nav-item" id="settings">
+              <div class="hicon-settings"></div>
+              Settings
+            </a>
+          </li>
+          <!-- <li class="blog-nav" id="information">
+            <a class="blog-nav-item">
+              <div class="hicon-info"></div>
+              Information
+            </a>
+          </li>
+          <li class="blog-nav" id="settings">
+            <a class="blog-nav-item">
+              <div class="hicon-settings"></div>
+              Settings
+            </a>
+          </li> -->
+          <li class="blog-nav" id="reg">
+            <a class="blog-nav-item" id="signIn">
+              <div class="sign-in">
+                <div>Sign in</div>
+              </div>
+            </a>
+            <a class="blog-nav-item" id="signUp">
+              <div class="sign-up">
+                <div class="border-sign-up">Sign Up</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="article">
+          <h1 id="article">Home page</h1>
+        </div>
+      </div>
+      <div class="logo-nix">
+        <a href="https://www.nixsolutions.com/ru/" target="_blank">
+          <img src="img/nix-logo-new.svg" alt="nix" />
+        </a>
+      </div>
+    </header>
+    <div class="wrapper">
+      <main>
+        <div class="about100" id="groupMain">
+          <div class="green" id="green">
+            Проект Fullstack работа с файлами, БД, регистрация, авторизация
+          </div>
+          <div id="aboutMain">
+            <h2>Задание на проект:</h2>
+            <div class="task">
+              <ul class="ul-main">
+                <li>Авторизация на сайте</li>
+                <li>
+                  Для залогиненного пользователя форма с внесением ссылки на
+                  файл текстовый, файл csv и креды для БД
+                </li>
+                <li>
+                  После внесения - страничка получения и вывода данных, которая
+                  по ссылке читает данные из csv, txt и БД
+                </li>
+                <li>
+                  Красиво отобразить страницу, и позволить добавлять данные в
+                  любой из этих ресурсов: csv, txt или БД.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="aboutSignIn">
+            <div class="container">
+              <form name="signIn" action="" method="POST">
+                <div class="form-group">
+                  <label for="name">Your name or login</label>
+                  <br />
+                  <input type="text" name="name" id="name" minlength="2" maxlength="11"/>
+                  <br />
+                  <span class="spanRed"></span>
+                </div>
+                <div class="form-group">
+                  <label for="password">Your password</label><br />
+                  <input type="password" name="password" id="password" minlength="2" maxlength="11"/>
+                  <br />
+                  <span class="spanRed"></span>
+                </div>
+                <div class="form-group">
+                  <ul class="remember">
+                    <li>
+                      <input type="checkbox" name="rememberMe" id="rememberMe" />
+                      <label for="rememberMe">Remember me</label>
+                    </li>
+                    <li>
+                      <span>Forgot Password</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-group">
+                  <span>
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <label
+                      id="checkLabel"
+                      class="form-check-label"
+                      for="checkbox"
+                    >
+                      Check me out</label>
+                      <br />
+                    <span class="spanRed"></span>
+                  </span>
+                  <div id="captch">
+                    <img src="img/captcha.png" alt="captcha" />
+                    <br />
+                    <input
+                      type="text"
+                      name="captcha"
+                      id="captcha"
+                      placeholder="Enter the code"
+                      minlength="1" maxlength="6"
+                    />
+                  </div>
+                </div>
+                <!-- <input type="submit" name="send" id="send" class="backtotop" value="Sign In"> -->
+                <button id="send" class="backtotop">Sign In</button>
+              </form>
+            </div>
+          </div>
+          <div id="aboutSignUp">
+            <div class="container">
+              <form name="signUp" action="" method="POST">
+                <div class="form-group">
+                  <label for="name2">Your name or login</label><br />
+                  <input type="text" name="name2" id="name2" minlength="2" maxlength="11" />
+                  <span>(A..z, 0..9, characters 2-11)</span>
+                  <br />
+                  <span class="spanRed" id="errName2"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label><br />
+                  <input type="email" name="email" id="email"/>
+                  <span>(example@example.com)</span>
+                  <br />
+                  <span class="spanRed" id="errEmail"></span>
+                </div>
+                <div class="form-group">
+                  <label for="password1">Your password</label><br />
+                  <input type="password" name="password1" id="password1" minlength="2" maxlength="11"/>
+                  <span>(A..z, 0..9, characters 2-11)</span>
+                  <br />
+                  <span class="spanRed" id="errPassword1"></span>
+                </div>
+                <div class="form-group">
+                  <label for="password2">Enter the password again</label><br />
+                  <input type="password" name="password2" id="password2" minlength="2" maxlength="11"/>
+                  <span>(A..z, 0..9, characters 2-11)</span>
+                  <br />
+                  <span class="spanRed" id="errPassword2"></span>
+                </div>
+                <div class="form-group">
+                  <span>
+                    <input type="checkbox" name="checkbox2" id="checkbox2" />
+                    <label
+                      id="checkLabel2"
+                      class="form-check-label"
+                      for="checkbox2"
+                    >
+                      Check me out</label>
+                      <br />
+                    <span class="spanRed" id="errCaptch2"></span>
+                  </span>
+                  <div id="captch2">
+                    <img src="img/captcha.png" alt="captcha" />
+                    <br />
+                    <input
+                      type="text"
+                      name="captcha2"
+                      id="captcha2"
+                      placeholder="Enter the code"
+                      minlength="1" maxlength="6"
+                    />
+                  </div>
+                </div>
+                <!-- <input type="submit" name="send" id="send" class="backtotop" value="Sign Up"> -->
+                <button id="send2" class="backtotop">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="group-settings" id="groupSet">
+          <div class="about" id="settingDb">
+            <div class="green">Setting DataBase</div>
+            <img src="img/database.png" alt="DataBase" />
+            <div class="container">
+              <form name="feedback" action="" method="POST">
+                <div class="form-group">
+                  <label for="dbUser">DB User:</label><br />
+                  <input type="text" name="dbUser" id="dbUser" value="" />
+                  <br />
+                  <span class="spanRed"></span>
+                  <label for="dbHost">DB Host:</label><br />
+                  <input type="text" name="dbHost" id="dbHost" value="" />
+                  <br />
+                  <span class="spanRed"></span>
+                  <label for="dbPwd">DB Password:</label><br />
+                  <input type="text" name="dbPwd" id="dbPwd" value="" />
+                  <br />
+                  <span class="spanRed"></span>
+                  <label for="dbName">DB Name:</label><br />
+                  <input type="text" name="dbName" id="dbName" value="" />
+                  <br />
+                  <span class="spanRed"></span>
+                  <label for="tableName">Table Name:</label><br />
+                  <input type="text" name="tableName" id="tableName" value="" />
+                  <br />
+                  <span class="spanRed" id="errorDb"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="about" id="settingCsv">
+            <div class="green">Setting *.csv file</div>
+            <img src="img/csv2.png" alt="CSV" />
+            <div class="form-group">
+              <label for="file">Example file input</label><br />
+              <input
+                type="file"
+                name="file"
+                id="fileCsv"
+                accept=".csv"
+                onchange="checkFile(this)"
+              /><span>(Only type file: *.csv)</span><br />
+              <span class="spanRed" id="errorFileCsv"></span>
+            </div>
+          </div>
+          <div class="about" id="settingTxt">
+            <div class="green">Setting *.txt file</div>
+            <img src="img/txt3.png" alt="TXT" />
+            <div class="form-group">
+              <label for="file">Example file input</label><br />
+              <input
+                type="file"
+                name="file"
+                id="fileTxt"
+                accept=".txt"
+                onchange="checkFile(this)"
+              /><span>(Only type file: *.txt)</span><br />
+              <span class="spanRed" id="errorFileTxt"></span>
+            </div>
+          </div>
+          <div class="save-plus">
+            <div class="save" id="saveSettings">
+              <img src="img/save.png" alt="Save"/>
+            </div>
+          </div>
+        </div>
+        <div class="group-settings" id="groupInfo">
+          <div class="about" id="aboutDb">
+            <div class="green">Info from DataBase</div>
+            <img src="img/database.png" alt="DataBase" />
+            <div id="infoDb">infoDb</div>
+          </div>
+          <div class="about" id="aboutCsv">
+            <div class="green">Info from *.csv file</div>
+            <img src="img/csv2.png" alt="CSV" />
+            <div id="infoCsv"></div>
+          </div>
+          <div class="about" id="aboutTxt">
+            <div class="green">Info from *.txt file</div>
+            <img src="img/txt3.png" alt="TXT" />
+            <div id="infoTxt"></div>
+          </div>
+          <div class="save-plus">
+            <div class="save" id="plusAdd">
+              <img src="img/plus.png" alt="Add" id="addInfo"/>
+            </div>
+          </div>
+        </div>
+        <div class="about100" id="groupAdd">
+          <div class="green" id="green">
+            New Data
+          </div>
+          <div class="container">
+            <!-- <form action="" method="post"> -->
+              <div class="form-group">
+                <label for="message">Enter the info</label>
+                <br />
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="3"
+                  cols="45"
+                ></textarea>
+                <br />
+                <span class="spanRed" id="errorMessage"></span>
+              </div>
+              <div class="form-group">
+                <label for="source">Select source: </label>
+                <select name="source" id="source">
+                  <option value="db" selected>Database</option>
+                  <option value="csv">CSV</option>
+                  <option value="txt">TXT</option>
+                </select>
+                <br />
+                <span class="spanRed"></span>
+              </div>
+              <!-- <input type="submit" name="send" id="send" class="backtotop" value="Save"> -->
+              <button id="buttonSaveData" class="backtotop">Save Data</button>
+            <!-- </form> -->
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      @ A-Level Ukraine, NIX SOLUTIONS ™, design by
+      kostiantyn.shevtsov@gmail.com, 2021-2022
+    </footer>
+    <script src="js/sign.js"></script>
+    <script src="js/module.js"></script>
+  </body>
+</html>

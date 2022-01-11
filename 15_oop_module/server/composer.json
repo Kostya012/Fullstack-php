@@ -1,0 +1,17 @@
+{
+    "name": "root/html",
+    "autoload": {
+        "psr-4": {
+            "Root\\Html\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kostya",
+            "email": "kostiantyn.shevtsov@gmail.com"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "*"
+    }
+}

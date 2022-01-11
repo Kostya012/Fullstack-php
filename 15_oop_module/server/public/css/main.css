@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+/* MAIN */
+
+main {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px 20px 20px 20px;
+}
+
+.about {
+  width: 30%;
+  margin-right: 1%;
+  background-color: #ffffff;
+}
+
+.about100 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  /* text-align: center;
+  margin: 0 auto; */
+}
+
+.group-settings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  /* background-color: #ffffff; */
+}
+
+#aboutSignIn,
+#aboutSignUp,
+#groupSet,
+#groupInfo,
+#groupAdd {
+  display: none;
+}
+
+button {
+  font-size: 1.5em;
+}
+
+.about,
+.green,
+.about100 {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+h2 {
+  margin: 15px;
+  font-size: 34px;
+  text-align: center;
+}
+
+.task {
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  padding: 0 15px;
+}
+
+.ul-main {
+  text-align: left;
+  list-style-image: url(../img/star24.png);
+  list-style-position: inside;
+}
+
+.ul-main li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid silver;
+}
+
+.green {
+  display: block;
+  font-family: Kelson Sans RU, Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: #3a9942;
+  font-size: 20px;
+  text-align: left;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.about img {
+  display: block;
+  width: 33%;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+
+.about p {
+  text-indent: 1.5em;
+  padding: 10px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.item {
+  padding: 20px;
+  z-index: 2;
+}
+
+span input[name="min"] {
+  margin-left: 3px;
+}
+
+/* BUTTON */
+
+.button-77 {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 54px;
+  outline: none;
+  overflow: visible;
+  padding: 5px 18px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+.button-77:before,
+.button-77:after {
+  border-radius: 80px;
+}
+
+.button-77:before {
+  background-color: rgba(249, 58, 19, 0.32);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button-77:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button-77:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.button-77:active:not(:disabled) {
+  color: #ccc;
+}
+
+.button-77:active:not(:disabled):after {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button-77:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
+
+/* FOOTER */
+
+footer {
+  /* position:absolute;
+  bottom:0; */
+  display: flex;
+  width: 100%;
+  overflow: auto;
+  justify-content: center;
+  padding: 20px 20px;
+  background: radial-gradient(
+    ellipse 100% 100% at 50% 50%,
+    hsla(34deg, 38%, 98%, 1) 25%,
+    hsla(34deg, 38%, 98%, 0) 75%
+  );
+  font-size: 18px;
+}
+
+@media (max-width: 1207px) and (min-width: 986px) {
+  .about {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 987px) and (min-width: 786px) {
+  .hicon-info,
+  .hicon-settings,
+  .hicon-index {
+    background-size: 30px;
+    height: 30px;
+  }
+  .about {
+    flex-basis: 100%;
+    margin: 0;
+  }
+  .about {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 787px) and (min-width: 555px) {
+  .about {
+    flex-basis: 100%;
+    margin: 0;
+  }
+  .table {
+    font-size: 12px;
+  }
+  .hicon-info,
+  .hicon-settings,
+  .hicon-index {
+    background-size: 30px;
+    height: 30px;
+  }
+
+  .about {
+    flex-basis: 100%;
+    margin: 0;
+  }
+
+  .button-77 {
+    padding: 19px 32px;
+  }
+}
+
+@media (max-width: 556px) and (min-width: 320px) {
+  h1 {
+    font-size: 20px;
+  }
+  .hicon-info,
+  .hicon-settings,
+  .hicon-index {
+    background-size: 30px;
+    height: 30px;
+  }
+  .about {
+    flex-basis: 100%;
+    margin: 0;
+  }
+  .table {
+    font-size: 8px;
+  }
+  td {
+    padding: 2px;
+  }
+}
+
+@media (max-width: 321px) {
+  h1 {
+    font-size: 18px;
+  }
+  .hicon-info,
+  .hicon-settings,
+  .hicon-index {
+    background-size: 30px;
+    height: 30px;
+  }
+  .about {
+    flex-basis: 100%;
+    margin: 0;
+  }
+  .table {
+    font-size: 8px;
+  }
+  h2 {
+    font-size: 12px;
+    font-weight: 300;
+    padding: 5px;
+  }
+  h3 {
+    padding-right: 10px;
+    font-weight: 300;
+    width: 70px;
+  }
+}
